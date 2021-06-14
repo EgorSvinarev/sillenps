@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="cache-control" content="no-cache" />
+	<title>SillenPS</title>
+	<link rel="stylesheet" th:href="@{css/home/style.css}">
+</head>
+<body>
+	<header class="header">
+
+		<div class="header__logo">
+			<a href="${pageContext.request.contextPath}" style="text-decoration: none;"><h1 class="logo__text">SillenPS</h1></a>
+		</div>
+
+		<div class="header__auth">
+			<div class="auth__button_group">
+				<button class="btn" onclick="window.location.href='${pageContext.request.contextPath}/auth'">Войти</button>
+			</div>
+		</div>
+	</header>
+	<div class="main">
+		<div class="main__img"></div>
+
+		<div class="main__content">
+			<div class="content__title">
+				<div class="title__left">
+					<button class="btn" style="width: 70%;"  onclick="window.location.href='${pageContext.request.contextPath}/auth'">Попробовать!</button>
+				</div>
+				<div class="title__right">
+					<h1 class="logo__text">SillenPS</h1>
+					<span class="description__text"> - это платформа для проведения онлайн экзаменов, предоставляющая услуги прокторинга. Вы можете бесплатно зарегистрировать аккаунт и провести свой экзамен на нашей платформе. За соблюдением правил экзамена будет следить наш Искусственный Интеллект. Попробуйте прямо сейчас!</span>
+				</div>
+			</div>
+
+			<div class="content__description">
+				<!-- Размер изображения в описании должен быть 180*135 -->
+				<div class="description__block">
+					<div class="desciprion__image">
+						<img th:src="@{/img/ai_180^180.png}"><br>
+					</div>
+					<div class="description__text_block">
+						<span class="description__text">Наша система использует ai для </span><br>
+						<span class="description__text">отслеживания нарушений правил экзамена</span>
+					</div>
+				</div>
+				<div class="description__block">
+					<div class="desciprion__image">
+						<img th:src="@{/img/students_180^180.png}">
+					</div>
+					<div class="description__text_block">
+						<span class="description__text">Неограниченное количество студентов,</span><br>
+						<span class="description__text">сдающих экзамен</span>
+					</div>
+				</div>
+				<div class="description__block">
+					<div class="desciprion__image">
+						<img th:src="@{/img/editor_180^180.png}">
+					</div>
+					<div class="description__text_block">
+						<span class="description__text">Удобный редактор для создания</span><br>
+						<span class="description__text"> экзаменационных заданий</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="content__instruction">
+				<div class="instruction__block">
+					<div class="instruction__text_block">
+						<h1 class="description__text" style="font-size: 120%; font-weight: 120%; color: #3b2f1d;">1. Авторизируйтесь на нашей платформе</h1>
+						<span class="description__text">Зарегистрируйте новый аккаунт или зайдите в существующий. Чтобы организовать проведение экзамена,</span>
+						<span class="description__text"> вам нужно иметь аккаунт со статусом "Преподаватель".</span>
+					</div>
+					<div class="instruction__image">
+						<img th:src="@{/img/editor_180^180.png}" style="max-height: 140px; max-width: 140px;">
+					</div>
+				</div>
+				<div class="instruction__block">
+					<div class="instruction__text_block">
+						<h1 class="description__text" style="font-size: 120%; font-weight: 120%; color: #3b2f1d;">2. Организуйте экзамен </h1>
+						<h1 class="logo__text">SillenPS </h1><span class="description__text"> позволяет удобно составлять экзаменационные задания при помощи гибкого</span>
+						<span class="description__text"> редактора. После формирования перечня заданий вам остается только </span>
+						<span class="description__text">пригласить учащихся принять участие в сдаче экзамена.</span>
+					</div>
+					<div class="instruction__image">
+						<img th:src="@{/img/editor_180^180.png}" style="max-height: 140px; max-width: 140px;">
+					</div>
+				</div>
+				<div class="instruction__block">
+					<div class="instruction__text_block">
+						<h1 class="description__text" style="font-size: 120%; font-weight: 120%; color: #3b2f1d;">3. Пригласите учащихся принять участие в нем</h1>
+						<span class="description__text">Вы можете поделиться ссылкой на экзамен со своими учениками. Ознакомиться с результатами их сдачи можно по окончании экзамена.</span>
+					</div>
+					<div class="instruction__image">
+						<img th:src="@{/img/editor_180^180.png}" style="max-height: 140px; max-width: 140px;">
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<footer class="footer">
+		<a href="https://github.com/EgorSvinarev" target="_blank"><img th:src="@{/img/github_70^70.png}" alt=""></a>
+		<a href="https://t.me/EgorSvinarev" target="_blank"><img th:src="@{/img/telegram_70^70.png}" alt=""></a>
+		<a href="https://vk.com/pokoritelchuzhihmamok" target="_blank"><img th:src="@{/img/vk_70^70.png}" alt=""></a>
+	</footer>
+</body>
+</html>
