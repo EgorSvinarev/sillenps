@@ -10,6 +10,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.ForeignKey;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Positive;
+
 @Entity
 @Table(name = "users")
 public class User {
@@ -17,6 +20,7 @@ public class User {
 	@Id
 	@Column(name = "id", nullable = false)
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Positive
 	private Long id;
 	
 	@Column(name = "username", nullable = false)
@@ -26,6 +30,7 @@ public class User {
 	private String password;
 	
 	@Column(name = "email", nullable = false)
+	@Email
 	private String email;
 	
 	@JoinColumn(name = "role", foreignKey = @ForeignKey(name = "role_fk"))
