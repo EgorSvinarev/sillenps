@@ -17,7 +17,7 @@ xmlns:th="http://www.thymeleaf.org">
 
 		<div class="header__auth">
 			<div class="auth__button_group">
-				<button class="btn" onclick="window.location.href='${pageContext.request.contextPath}/auth'">Войти</button>
+				<button class="btn" th:onclick="'window.location.href = \'' + @{/auth} + '\''">Войти</button>
 			</div>
 		</div>
 	</header>
@@ -27,7 +27,7 @@ xmlns:th="http://www.thymeleaf.org">
 		<div class="main__content">
 			<div class="content__title">
 				<div class="title__left">
-					<button class="btn" style="width: 70%;"  onclick="window.location.href='${pageContext.request.contextPath}/auth'">Попробовать!</button>
+					<button class="btn" style="width: 70%;"  th:onclick="'window.location.href = \'' + @{/auth} + '\''">Попробовать!</button>
 				</div>
 				<div class="title__right">
 					<h1 class="logo__text">SillenPS</h1>
@@ -104,7 +104,7 @@ xmlns:th="http://www.thymeleaf.org">
 	<footer class="footer">
 		<a href="https://github.com/EgorSvinarev" target="_blank"><img th:src="@{/img/github_70^70.png}" alt=""></a>
 		<a href="https://t.me/EgorSvinarev" target="_blank"><img th:src="@{/img/telegram_70^70.png}" alt=""></a>
-		<a href="https://vk.com/pokoritelchuzhihmamok" target="_blank"><img th:src="@{/img/vk_70^70.png}" alt=""></a>
+		<a href="https://vk.com/egor_svinarev" target="_blank"><img th:src="@{/img/vk_70^70.png}" alt=""></a>
 	</footer>
 </body>
 </html>

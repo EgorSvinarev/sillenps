@@ -143,9 +143,11 @@ html {
 	border: 2px solid #f9a71b;
 	color: #f9a71b;
 	font-family: "Adderley Bold";
-	font-size: 110%;
+	font-size: 17px;
 	border-radius: 5px;
 	outline: none;
+	padding-top: 6px;
+	padding-bottom: 4px;
 }
 
 .btn:hover {
