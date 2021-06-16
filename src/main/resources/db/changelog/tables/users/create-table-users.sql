@@ -11,4 +11,6 @@ CREATE TABLE users (
 	name VARCHAR(20),
 	surname VARCHAR(20),
 	gender INT UNSIGNED
-)
+);
+
+-- rollback DROP TABLE users;
