@@ -3,7 +3,7 @@
 --changeset egor:2021-06-16-create-table-roles
 
 CREATE TABLE roles(
-	id BIGINT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
 	name VARCHAR(30)
 );
 
