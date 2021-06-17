@@ -13,8 +13,17 @@ import javax.persistence.ForeignKey;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Positive;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 @Entity
 @Table(name = "users")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class User {
 
 	@Id

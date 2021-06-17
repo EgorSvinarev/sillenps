@@ -9,8 +9,17 @@ import javax.persistence.Table;
 
 import javax.validation.constraints.Positive;
 
+import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Builder;
+
 @Entity
 @Table(name = "genders")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Gender {
 	
 	@Id
