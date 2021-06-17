@@ -3,6 +3,9 @@ package com.svinarev.sillenps.entities;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Id;
+
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -18,13 +21,19 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
+import java.util.List;
+import java.util.ArrayList;
+
 @Entity
 @Table(name = "users")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
+public class User implements UserDetails {
 
 	@Id
 	@Column(name = "id", nullable = false)
@@ -55,4 +64,44 @@ public class User {
 	@JoinColumn(name = "gender", foreignKey = @ForeignKey(name = "gender_fk"))
 	@ManyToOne
 	private Gender gender;
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		List<GrantedAuthority> authority = new ArrayList<GrantedAuthority>();
+		authority.add(this.role);
+		
+		return authority;
+	}
+
+	@Override
+	public String getPassword() {
+		return this.password;
+	}
+
+	@Override
+	public String getUsername() {
+		return this.username;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return true;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return true;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return true;
+	}
+
+	
 }
