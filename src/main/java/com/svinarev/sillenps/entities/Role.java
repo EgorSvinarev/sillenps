@@ -15,7 +15,7 @@ public class Role {
 
 	@Id
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Positive
 	private int id;
 	

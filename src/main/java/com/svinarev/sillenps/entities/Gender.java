@@ -15,7 +15,7 @@ public class Gender {
 	
 	@Id
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Positive
 	private int id;
 	
