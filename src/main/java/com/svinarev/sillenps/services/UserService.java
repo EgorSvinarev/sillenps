@@ -9,6 +9,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import com.svinarev.sillenps.repositories.UserRepository;
 import com.svinarev.sillenps.entities.User;
+import com.svinarev.sillenps.entities.Role;
 
 import java.util.Optional;
 
