@@ -1,13 +1,3 @@
-@font-face {
-	font-family: "Little One Russian";
-	src: url(/fonts/19639.ttf);
-}
-
-@font-face {
-	font-family: "Adderley Bold";
-	src: url(/fonts/17674.otf);
-}
-
 * {
 	box-sizing: border-box;
 }
