@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SillenPS</title>
+	<link rel="stylesheet" th:href="@{css/authorization/style.css}">
+	<link rel="stylesheet" th:href="@{css/fonts-init/style.css}">
+	<link rel="stylesheet" type="text/css" th:href="@{css/authorization/animate-custom.css}" />
+	<script defer th:src="@{scripts/auth/auth_form_validator.js}"></script>
+	<script defer th:src="@{scripts/auth/reg_form_validator.js}"></script>
+</head>
+<body>
+	<header class="header">
+		<div class="header__logo">
+			<a th:href="@{/}" style="text-decoration: none;"><h1 class="logo__text">SillenPS</h1></a>
+		</div>
+	</header>
+
+	<div class="main">
+		<div class="main__content">
+			<div class="content">
+				<a class="hiddenanchor" id="toregister"></a>
+    			<a class="hiddenanchor" id="tologin"></a>
+    			<a class="hiddenanchor" id="tochangepassword"></a>
+				
+				<div id="login" class="animate form">
+					<div class="title">
+						<span>Добро пожаловать</span>
+					</div>
+					<form action="@{/login}" class="form_" id="auth__form" method="post">
+						<div class="auth__fields">
+							<input type="text" class="field" placeholder="Логин" name="login"><br>
+							<input type="password" class="field" placeholder="Пароль" name="password">
+						</div>
+							<div class="auth__error" th:if="${errorCode}">
+								<span th:text="${info}"></span>
+							</div>
+							<div class="auth__links">
+								<a href="#toregister" class="link">Зарегистрироваться</a><br>
+								<a href="#tochangepassword" class="link">Вы забыли пароль?</a><br>
+							</div>
+					</form>
+					<div class="auth__buttons" style="">
+						<button class="btn" style="width: 150px; height: 35px">Войти</button>
+					</div>
+				</div>
+
+				<div id="register" class="animate">
+					<div class="title">	
+							Регистрация
+						</div>
+					<form action="@{/register}" class="form_" id="regirster_form" method="post">
+						<div class="reg__fields">
+							<input type="text" name="login" class="field" placeholder="Логин"><br>
+							<input type="password" name="password" class="field" placeholder="Пароль"><br>
+							<input type="email" name="email" class="field" placeholder="Электронная почта"><br>
+							<label style="font-family: 'Adderley Bold'; color: #7D633D">Преподаватель<input type="radio" name="role" value="2"></label>
+							<label style="font-family: 'Adderley Bold'; color: #7D633D">Ученик<input type="radio" name="role" value="3"></label>
+						</div>
+
+							<div class="reg__error" style="text-align: center; color: red; height: 50px;" th:if="${errorCode}">
+								<span th:text="${info}"></span>
+							</div>
+						<div class="reg__links">
+							<a href="#tologin" class="link">Вы уже зарегистрированы?</a>
+						</div>
+					</form>
+					<div class="reg__buttons">
+						<button class="btn" style="width: 150px; height: 35px">Зарегистрироваться</button>
+					</div>
+				</div>
+
+				<div id="change_password" class="animate">
+					<div class="title">
+						Восстановление пароля
+					</div>
+					<form action="" class="form_" id="change_password_form">
+						<div class="change_password__fields">
+							<input type="text" class="field" placeholder="Электронная почта">
+						</div>
+						<div class="change_password__links">
+							<a href="#tologin" class="link">Назад к авторизации</a>
+						</div>
+						<div class="change_password__buttons">
+							<button class="btn" style="width: 150px; height: 35px">Восстановить пароль</button>
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<footer class="footer">
+		<a href="https://github.com/EgorSvinarev" target="_blank"><img th:src="@{img/github_70^70.png}" alt=""></a>
+		<a href="https://t.me/EgorSvinarev" target="_blank"><img th:src="@{img/telegram_70^70.png}" alt=""></a>
+		<a href="https://vk.com/pokoritelchuzhihmamok" target="_blank"><img th:src="@{img/vk_70^70.png}" alt=""></a>
+	</footer>
+
+	
+
+</body>
+</html>
