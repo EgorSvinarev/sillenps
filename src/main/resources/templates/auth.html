@@ -31,7 +31,7 @@ xmlns:th="http://www.thymeleaf.org">
 					</div>
 					<form action="@{/login}" class="form_" id="auth__form" method="post">
 						<div class="auth__fields">
-							<input type="text" class="field" placeholder="Логин" name="login"><br>
+							<input type="text" class="field" placeholder="Логин" name="username"><br>
 							<input type="password" class="field" placeholder="Пароль" name="password">
 						</div>
 							<div class="auth__error" th:if="${errorCode}">

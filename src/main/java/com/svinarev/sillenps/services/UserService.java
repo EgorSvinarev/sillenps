@@ -27,7 +27,7 @@ public class UserService implements UserDetailsService{
 		Optional<User> user = repository.findByUsername(username);
 		
 		if (user.isEmpty()) {
-			throw new UsernameNotFoundException("User not found");
+			throw new UsernameNotFoundException("The user wasn't found.");
 		}
 		
 		return user.get();
